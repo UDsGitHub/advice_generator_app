@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;800&display=swap');
+
+:root {
+  --LightCyan: hsl(193, 38%, 86%);
+  --NeonGreen: hsl(150, 100%, 66%);
+
+  --GrayishBlue: hsl(217, 19%, 38%);
+  --DarkGrayishBlue: hsl(217, 19%, 24%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background: #202632;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Manrope', sans-serif;
+}
+
+main {
+  width: 100%;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.advice__card{
+    position: relative;
+    background-color: #313a49;
+    border-radius: 20px;
+    max-width: 540px;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.advice__id{
+    font-size: 1rem;
+    color: var(--NeonGreen);
+    font-weight: regular;
+    letter-spacing: .35rem;
+}
+
+.advice__msg{
+    font-size: 1.75rem;
+    color: var(--LightCyan);
+    font-weight: 800;
+    line-height: 1.5;
+}
+
+.advice__divider{
+    margin-bottom: 1rem;
+}
+
+.advice__dice_btn{
+    position: absolute;
+    bottom: -32px;
+    border: none;
+    border-radius: 50%;
+    padding: 1.25rem;
+    display: grid;
+    place-items: center;
+    background-color: var(--NeonGreen);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.advice__dice_btn:hover{
+    transform: scale(1.115);
+    box-shadow: 0 0 35px 2px var(--NeonGreen);
+}
+
+.advice__dice_btn:active{
+    transform: scale(.95) translateY(2px);
+}
+
+.attribution{
+    position: absolute;
+    bottom: 10px;
+    color: white;
+}
+
+.attribution a{
+    color: var(--NeonGreen);
+}
+
+@media screen and (max-width: 540px) {
+    .advice__card{
+        width: 100%;
+        padding: 2.5rem;
+    }
+
+    .advice__id{
+        font-size: .5rem;
+        letter-spacing: .25rem;
+    }
+
+    .advice__msg{
+        font-size: 1.35rem;
+    }
+    
+    .advice__dice_btn{
+        padding: 1rem;
+    }
+    
+}
